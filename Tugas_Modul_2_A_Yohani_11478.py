@@ -18,7 +18,7 @@ try:
 except FileNotFoundError:
     st.error("_")
 except Exception as e:
-    st.error(f"_")
+    st.error(f"")
 
 st.title("Prediksi Potensi Penyakit Jantung")
 st.write("Aplikas ini berguna untuk membantu mengenali potensi penyakit jantung pada manusia berusia 21 - 70 tahun")
