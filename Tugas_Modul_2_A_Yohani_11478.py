@@ -7,10 +7,18 @@ import os
 
 model = "GBT_heartDisease_model.pkl"
 
-with open(model, 'rb') as f:
-    loaded_model = pickle.load(f)
+#with open(model, 'rb') as f:
+#    loaded_model = pickle.load(f)
+#rf_model = loaded_model
 
-rf_model = loaded_model
+try:
+    with open(model, 'rb') as f:
+        loaded_model = pickle.load(f)
+    rf_model = loaded_model
+except FileNotFoundError:
+    st.error("Model tidak ditemukan. Pastikan file GBT_heartDisease_model.pkl ada di direktori yang benar.")
+except Exception as e:
+    st.error(f"Terjadi kesalahan saat memuat model: {e}")
 
 st.title("Prediksi Potensi Penyakit Jantung")
 st.write("Aplikas ini berguna untuk membantu mengenali potensi penyakit jantung pada manusia berusia 21 - 70 tahun")
