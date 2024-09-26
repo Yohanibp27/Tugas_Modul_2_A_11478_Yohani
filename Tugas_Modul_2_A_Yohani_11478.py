@@ -3,8 +3,8 @@ import pickle
 import os
 
 # model_path = "D:\Semester 7\PMDPM - A\Pert - 4 Model Training and Evaluation with Python (Praktek)\Tugas_A_11478"
-model_path = r"D:\Semester 7\PMDPM - A\Pert - 4 Model Training and Evaluation with Python (Praktek)\Tugas_A_11478"
-model = os.path.join(model_path, "GBT_heartDisease_model.pkl")
+
+model = os.path.join("GBT_heartDisease_model.pkl")
 
 with open(model, 'rb') as f:
     loaded_model = pickle.load(f)
