@@ -2,7 +2,7 @@ import streamlit as st
 import pickle 
 import os
 
-model_path = "D:\Tugas_A_11478"
+model_path = r"D:\Tugas_A_11478"
 model = os.path.join(model_path, "GBT_heartDisease_model.pkl")
 
 # model = "GBT_heartDisease_model.pkl"
